@@ -4,7 +4,10 @@
   "description": "SQLite/Drizzle-backed implementation of the anchored-chain stores",
   "bounded": {
     "tagline": "SQLite/Drizzle-backed implementation of the anchored-chain stores",
-    "kind": "room"
+    "kind": "room",
+    "facet": "noun",
+    "role": "store-impl",
+    "domain": "provenance/persistence"
   },
   "license": "MIT",
   "type": "module",

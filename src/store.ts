@@ -38,6 +38,9 @@ import {
   schema,
 } from "./schema.ts";
 
+/**
+ * Open an anchored-chain store backed by a SQLite database with derivation lineage and invalidation tracking.
+ */
 export function openAnchoredChain(path: string = ":memory:"): AnchoredChainStore {
   const sqlite = new Database(path, { create: true });
   sqlite.exec("PRAGMA journal_mode = WAL");

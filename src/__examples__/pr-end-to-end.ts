@@ -24,24 +24,63 @@ import type {
 } from "@bounded-systems/anchored-chain";
 import { sha256Hex } from "@bounded-systems/cas";
 
+/**
+ * Arguments for the end-to-end PR workflow.
+ */
 export interface RunPrEndToEndArgs {
+  /**
+   * Anchored-chain store for persisting refs and derivations.
+   */
   readonly store: AnchoredChainStore;
+  /**
+   * Fetcher implementation to retrieve PR content and freshness signals.
+   */
   readonly fetcher: Fetcher;
+  /**
+   * Surface reference (e.g. `pr/<unit>`) to advance via CAS.
+   */
   readonly surface: SurfaceRef;
+  /**
+   * Timestamp for the derivation and ref update (milliseconds since epoch).
+   */
   readonly now: number;
+  /**
+   * Optional producer identifier; defaults to `"fetcher:gh-pr"`.
+   */
   readonly producer?: string;
 }
 
+/**
+ * Result of the end-to-end PR workflow.
+ */
 export interface RunPrEndToEndResult {
+  /**
+   * Whether a new derivation was appended; `false` if the derivation already existed.
+   */
   readonly appended: boolean;
+  /**
+   * Digest of the ref after the CAS operation.
+   */
   readonly refDigest: Digest;
+  /**
+   * Digest ID of the derivation that was appended or reused.
+   */
   readonly derivationId: Digest;
+  /**
+   * Freshness signal from the fetched content (e.g. commit SHA, ETag).
+   */
   readonly freshnessSignal: string;
+  /**
+   * Digests of descendant derivations that were invalidated by the ref change.
+   */
   readonly invalidated: readonly Digest[];
 }
 
 const DEFAULT_PRODUCER = "fetcher:gh-pr";
 
+/**
+ * Execute an end-to-end PR workflow: fetch content, advance the surface ref via CAS, append a derivation with reproducible manifest digest, and invalidate dependent derivations.
+ */
 export async function runPrEndToEnd(args: RunPrEndToEndArgs): Promise<RunPrEndToEndResult> {
   const { store, fetcher, surface, now } = args;
   const producer = args.producer ?? DEFAULT_PRODUCER;

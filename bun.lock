@@ -5,8 +5,8 @@
     "": {
       "name": "@bounded-systems/anchored-chain-sqlite",
       "dependencies": {
-        "@bounded-systems/anchored-chain": "npm:@jsr/bounded-systems__anchored-chain",
-        "@bounded-systems/cas": "npm:@jsr/bounded-systems__cas",
+        "@bounded-systems/anchored-chain": "npm:@jsr/bounded-systems__anchored-chain@^0.2.1",
+        "@bounded-systems/cas": "npm:@jsr/bounded-systems__cas@^0.1.2",
         "drizzle-orm": "^0.45.2",
       },
       "devDependencies": {
@@ -19,7 +19,7 @@
   "packages": {
     "@bounded-systems/anchored-chain": ["@jsr/bounded-systems__anchored-chain@0.2.1", "https://npm.jsr.io/~/11/@jsr/bounded-systems__anchored-chain/0.2.1.tgz", { "dependencies": { "@jsr/bounded-systems__cas": "^0.1.1" } }, "sha512-Xg2kxe2tnJpNfRqKev6cwwFzb6nEpzhi6/LUMuRCuvzGU3yvSju5CM7tt7RqH8MkmQVFAvPpT62/QvjLzloSBA=="],
 
-    "@bounded-systems/cas": ["@jsr/bounded-systems__cas@0.1.1", "https://npm.jsr.io/~/11/@jsr/bounded-systems__cas/0.1.1.tgz", {}, "sha512-fD2vAvTY366X/ivqVT0aJ1Ngzq83B4P565zaAOWxYXEfTHy79daJpO+8AZT5GrqD7oXY9ARkH/mtPi1Bx70DlA=="],
+    "@bounded-systems/cas": ["@jsr/bounded-systems__cas@0.1.2", "https://npm.jsr.io/~/11/@jsr/bounded-systems__cas/0.1.2.tgz", {}, "sha512-Pp1MWl5KJL30HMLqFAZ+g62IYH9g5xpDDNUdRDgsdomnMamXnubg+yyg4N1elqaupa6Q7A/cmlaRtqP8KHu4eA=="],
 
     "@drizzle-team/brocli": ["@drizzle-team/brocli@0.10.2", "", {}, "sha512-z33Il7l5dKjUgGULTqBsQBQwckHh5AbIuxhdsIxDDiZAzBOrZO6q9ogcWC65kU382AfynTfgNumVcNIjuIua6w=="],
 

@@ -1,6 +1,6 @@
 {
   "name": "@bounded-systems/anchored-chain-sqlite",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "SQLite/Drizzle-backed implementation of the anchored-chain stores",
   "bounded": {
     "tagline": "SQLite/Drizzle-backed implementation of the anchored-chain stores",
@@ -62,8 +62,8 @@
     "drizzle-kit": "^0.31.10"
   },
   "dependencies": {
-    "@bounded-systems/anchored-chain": "npm:@jsr/bounded-systems__anchored-chain",
-    "@bounded-systems/cas": "npm:@jsr/bounded-systems__cas",
+    "@bounded-systems/anchored-chain": "npm:@jsr/bounded-systems__anchored-chain@^0.2.1",
+    "@bounded-systems/cas": "npm:@jsr/bounded-systems__cas@^0.1.2",
     "drizzle-orm": "^0.45.2"
   }
 }

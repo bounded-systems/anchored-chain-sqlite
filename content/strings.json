@@ -5,6 +5,10 @@
   },
   "description": {
     "type": "meta",
-    "value": "SQLite/Drizzle-backed implementation of the anchored-chain stores"
+    "value": "The SQLite/Drizzle-backed implementation of the @bounded-systems/anchored-chain stores.  The pure core defines the ports (RefStore, DerivationStore, AnchoredChainStore) but binds to no database.  This package is where bun:sqlite + drizzle-orm live: it implements those ports ov…"
+  },
+  "keywords": {
+    "type": "body",
+    "value": "ANCHORED-CHAIN · PROVENANCE · SQLITE · DRIZZLE · BUN · DERIVATION-STORE"
   }
 }

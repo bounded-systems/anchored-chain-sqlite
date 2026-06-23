@@ -1,0 +1,10 @@
+{
+  "name": {
+    "type": "name",
+    "value": "Anchored Chain Sqlite"
+  },
+  "description": {
+    "type": "meta",
+    "value": "SQLite/Drizzle-backed implementation of the anchored-chain stores"
+  }
+}

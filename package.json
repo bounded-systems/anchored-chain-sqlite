@@ -28,6 +28,7 @@
     "bun",
     "derivation-store"
   ],
+  "//": "Publishing goes through `jsr publish` only (.github/workflows/publish-jsr.yml); there is no npm lane. JSR generates the npm-mirror manifest, and JSR-native consumers resolve through jsr.json's `exports`. So `engines`, `exports`, `files`, `publishConfig` and `prepublishOnly` below are DEV-ONLY today — nothing reads them. Kept to document intent for a future npm lane. See #14.",
   "engines": {
     "bun": ">=1.0.0"
   },
